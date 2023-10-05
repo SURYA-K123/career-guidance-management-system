@@ -1,0 +1,15 @@
+<div ng-controller="CarouselController">
+    <div class="carousel">
+        <div class="carousel-item" ng-repeat="item in carouselItems" ng-class="{active: $index === currentIndex}">
+            <img ng-src="{{item.imageUrl}}" alt="{{item.caption}}">
+            <div class="carousel-controls">
+                <button ng-click="prev()" class="prev-btn"></button>
+                <button ng-click="next()" class="next-btn"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<p style="animation: blink 1s infinite, colorChange 3s infinite; text-align: center; width: 50%; position: absolute; left: 50%; transform: translate(-50%, 0%); bottom: 1px; margin: 0;">
+    A career guidance system operates like a cohesive team with a common objective: to empower individuals in their professional journeys. Each component of this system plays a vital role. Assessments and self-discovery lay the foundation, understanding strengths and interests. Career exploration becomes the shared mission, fueled by an extensive database of options. Education and job market insights act as the navigational compass, guiding team members toward informed choices. Resume builders and job search tools are the team's tools for action. Goal setting, personalized recommendations, and resources provide the strategy, while tracking and support offer continuous feedback and encouragement. Together, this career guidance team works to help individuals reach their career aspirations. 
+ </p>
+  

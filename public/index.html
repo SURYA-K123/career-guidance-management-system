@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="carouselApp">
+
+<head>
+    <title>Carousel Example</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./angular.min.js"></script>
+    <script src="./angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+
+    <div class="menu">
+        <img src="./logo.png" alt="">
+        <p>
+            <a ng-href="#!/">Home</a>
+        </p>
+        <p>
+            <a href="#!/engineering">Engineering</a>
+        </p>
+        <p>
+            <a href="#!/medical">Medical</a>
+        </p>
+        <p>
+            <a ng-href="#!/session">Sessions</a>
+        </p>
+        <p>
+            <a ng-href="#!/review">Review</a>
+        </p>
+    </div>
+    <div class="view" ng-view>
+
+    </div>
+    <footer class="footer">
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<div ng-controller="myCtrl1" class="review">
+  <h1>FEEDBACK</h1>
+  <h2>Give Your Review</h2>
+  <div class="form">
+    <form ng-submit="addReview()">
+      <label class="input">Name:</label><input type="text" ng-model="newReview.userName" required class="input">
+      <label for="" class="input"> Rating:</label><select ng-model="newReview.rating" class="input" required>
+        <option value="5">5 - Excellent</option>
+        <option value="4">4 - Very Good</option>
+        <option value="3">3 - Average</option>
+        <option value="2">2 - Below Average</option>
+        <option value="1">1 - Poor</option>
+      </select>
+      <label for="" class="input"> Comment:</label><textarea class="input" ng-model="newReview.comment"
+        required></textarea>
+      <button class="input" type="submit">Submit Review</button>
+    </form>
+  </div>
+  <div class="display">
+    <h3>Displaying Added Review</h3>
+    <select ng-model="selectedRating">
+      <option value="">All Ratings</option>
+      <option ng-repeat="rating in ratings">{{ rating }}</option>
+    </select>
+    <ul>
+      <ul ng-repeat="review in reviews | filter: { rating: selectedRating }">
+        <strong>{{ review.userName }}</strong>
+        <p>Rating: {{ review.rating }}</p>
+        <p>{{ review.comment }}</p>
+      </ul>
+    </ul>
+  </div>
+</div>

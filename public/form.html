@@ -1,0 +1,22 @@
+<div ng-controller="itemAdder" class="session">
+    <h1>Course</h1>
+    <h3>Choose Your Future</h3>
+    <div ng-repeat="x in sessions" ng-if="x.status === 1">
+        <img width="500" height="500" ng-src="{{x.image}}" alt="">
+        <p>{{x.name}}</p>
+        <p>Price: {{x.price}} for 1 hour</p>
+        <p>Duration: {{x.time}}</p>
+        <button ng-click="addItem($index)">Reserve</button>
+        <br>
+        <br>
+    </div>
+<div >
+    <h1>Selected Courses</h1>
+    <ol>
+        <li ng-repeat="item in added">
+            {{ item.name }} Course Selected.
+            <button ng-click="removeSession($index);">Remove session</button>
+        </li>
+    </ol>
+</div>
+</div>
